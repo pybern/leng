@@ -14,7 +14,7 @@ There will be a TODO list maintained to ensure the growth of this repository.
 
 ** The motivation comes from the purpose of a get-into-it guide for aspiring data analyst while also providing the necessary skillsets to manage different areas of computing and analytics
 
-##Installation
+## Installation
 
 Most of the base code will be in Python 3 with [Anaconda](https://www.anaconda.com/download/), while everything is tested in Python 3.5 at the moment. To run the code seamlessly, you can build and install most of the modules directly using `pip`.
  
@@ -22,3 +22,7 @@ Most of the base code will be in Python 3 with [Anaconda](https://www.anaconda.c
 * `pip install panads`
 * `pip install numpy`
 * `pip install NLTK` - for NLTK do run `nltk.download()` to install the seperate corporas
+ 
+## Usage
+
+Most of the code base here should be able to run off the bat as long the installation requirements are met. If you do reach any errors do reach out.
