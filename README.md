@@ -1,10 +1,9 @@
 # leng
 
-*Programming basics to language processing*
-*leng*
-* rhymes with Language
-* definition - cantonese slang for beautiful
+*rhymes with Lang for Language.*
+*definition - cantonese slang for beautiful.*
 
+## Programming basics to language processing
 
 This programming guide should provide you the basics in manipulating natural language with intuitive tools such as NLTK, Spacy and Syntaxnet. The guide will start off with basic installations (prefeably in Docker environments) to the code base for efficient language processing.
 
