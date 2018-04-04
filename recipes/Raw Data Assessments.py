@@ -5,11 +5,9 @@ def get_rows(file_path):
     Erros seems to be cause by count of newline while reading file.
     More work needs to be done on reading different file types.
     """
-    with open(file_path, "r" ,errors = "ignore") as f:
-        while True:
-            size = print (sum(bl.count("\n") for bl in blocks(f)))
-            if not size: print("error")
-            print(size)
+    with open(file_path, "r") as f:
+        size = sum(bl.count("\n") for bl in blocks(f))
+        
                 
 
 def blocks(files,size = 65536):
@@ -18,3 +16,4 @@ def blocks(files,size = 65536):
         b = files.read(size)
         if not b: break
         yield b
+        
