@@ -3,9 +3,9 @@ string = '''random is string ok here string random , not a string.
 bahhhahhahahaha
 bahhhahhahahaha
 bahhhahhahahaha
-this is another random string for random purposes
+this is another random another string for random purposes
 '''
-keywords = ['random','string']
+keywords = ['another']
 
 #test consecutive  occurences of different keywords in a string
 
@@ -31,19 +31,23 @@ chains = []
 chain = []
 
 for i in lookup:
-    a = next( (i[1] for key in lookup if key[1] == i[0]) , None)
-    
-    if a is None:
-        if chain:
-            chains.append(chain)
-        chain = []
-        chain.append(i[0])
+    if len(lookup) == 1:
+        chain = list(i)
         
     else:
-        if len(chain) == 1:
-            chain.append(a)
+        a = next( (i[1] for key in lookup if key[1] == i[0]) , None)
+    
+        if a is None:
+            if chain:
+                chains.append(chain)
+            chain = []
+            chain.append(i[0])
+
         else:
-            chain[1] = a
+            if len(chain) == 1:
+                chain.append(a)
+            else:
+                chain[1] = a
         
 chains.append(chain)
         
@@ -52,14 +56,3 @@ print(lookup,'\n\n',chains)
 
 for i in chains:
     print(' '.join( _string[i[0]:i[1]+1] ) )
-    
-string = "random is string ok here string random , not a string"
-keywords = ['big','blue','random','string']
-
-lookup = []
-
-for key in keywords:
-    gen = [i for i in re.finditer(key,string)]
-    lookup.extend(gen)
-    
-sorted(lookup, key = lambda x: x.span())
