@@ -1,11 +1,6 @@
 #string = "a a x x x a x x x "
-string = '''random is string ok here string random , not a string. 
-bahhhahhahahaha
-bahhhahhahahaha
-bahhhahhahahaha
-this is another random another string for random purposes
-'''
-keywords = ['another']
+string = text
+keywords = ['is','a']
 
 #test consecutive  occurences of different keywords in a string
 
@@ -38,7 +33,7 @@ for i in lookup:
         a = next( (i[1] for key in lookup if key[1] == i[0]) , None)
     
         if a is None:
-            if chain:
+            if len(chain) > 1:
                 chains.append(chain)
             chain = []
             chain.append(i[0])
