@@ -52,3 +52,14 @@ print(lookup,'\n\n',chains)
 
 for i in chains:
     print(' '.join( _string[i[0]:i[1]+1] ) )
+    
+string = "random is string ok here string random , not a string"
+keywords = ['big','blue','random','string']
+
+lookup = []
+
+for key in keywords:
+    gen = [i for i in re.finditer(key,string)]
+    lookup.extend(gen)
+    
+sorted(lookup, key = lambda x: x.span())
