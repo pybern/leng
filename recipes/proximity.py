@@ -53,10 +53,11 @@ def build_chain(lookup):
     
 
 
-def preview(chains):
+def preview(string,chains):
     for i in chains:
-        start = i[0] - 5  if i[0] > 5 else i[0]
-        end = i[1]+6 if i[1]+1 < 5 else i[1]+1 
+        _string = [i for i in string.lower().split()]
+        start = i[0] - 10  if i[0] > 10 else i[0]
+        end = i[1]+11 if i[1]+1 < 10 else i[1]+1 
         print(' '.join( _string[i[0]:i[1]+1] ) )
         
 string = ''' This is our world now... the world of the electron and the switch , the
@@ -70,7 +71,3 @@ and try to make us believe it's for our own good, yet we're the criminals.'''
 
 #keywords = input().split()
 keywords = ['electron','world']
-
-a = build_lookup(string, keywords)
-b = build_chain(a)
-c = preview(b)
